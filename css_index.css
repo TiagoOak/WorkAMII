@@ -1,0 +1,261 @@
+/*https://www.w3schools.com/css/tryit.asp?filename=trycss3_flexbox_image_gallery*/
+html, body {
+    height: 100%;
+    background-color: rgb(40, 44, 45);
+    margin: 0;
+}
+
+.homepage-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
+    url("watercolorbackground.jpg") no-repeat center center fixed;
+}
+
+.header {
+    align-items: center;
+    overflow: auto;
+    width: 100%;
+    height: 15%;
+    position: fixed;
+    justify-content: flex-start;
+    top: 20px;
+    display: flex;
+    background: #000;
+    margin-top: -2.5em;
+    font-family: 'Merriweather', serif;
+    color: #fff;
+    }
+
+.inline-block-centralizado {
+  background: black;
+  font-size: 150%;
+  }
+
+a:link {
+    text-decoration: none;
+    color: white;
+    float: right;
+}
+
+a:visited {
+    text-decoration: none;
+    color: white;
+    float: right;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: white;
+    float: right;
+}
+
+a:active {
+    text-decoration: underline;
+    color: white;
+    float: right;
+}
+.inline-block-centralizado div {
+  display: inline-block;
+  text-align: left;
+}
+
+.box {
+    float: left;
+    width: 33.33%;
+    padding: 50px;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.half-home-container {
+    background: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: inherit;
+    border: solid #333;
+    border-width: 5%;
+    width: 100%;
+    height: 15%;    
+    background-clip: border-box;
+    font-family: 'Dancing Script', cursive;
+    font-size: 112px;
+}
+
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+    display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+
+/*#photo{
+	display:flex;
+	align-items: center;
+	justify-content: space-around;
+}
+
+#icons{
+	display:flex;
+	align-items: center;
+	justify-content: center;
+}
+ #icons div{
+ 	padding-left:35px ;
+ 	padding-right:35px;
+ 	padding-bottom: 60px;
+
+ }
+
+ #name{
+ 	text-align: center;
+ 	padding-top: 15px;
+ 	padding-bottom: 15px;
+
+ }
+
+ .flex-container{
+ 	display:flex;
+ 	align-items: center;
+	justify-content: center;
+	max-width: 600px;
+	flex-wrap: wrap;
+	background-color: black;
+ }
+
+ .flex-item{
+ 	background-color:#f1f1f1;
+ 	margin: 10px;
+ 	line-height:75px;
+ 	font-size:30px;
+ }
+  /* For mobile phones: */
+[class*="col-"] {
+    width: 100%;
+}
+@media only screen and (min-width: 600px) {
+    /* For tablets: */
+    .col-s-1 {width: 8.33%;}
+    .col-s-2 {width: 16.66%;}
+    .col-s-3 {width: 25%;}
+    .col-s-4 {width: 33.33%;}
+    .col-s-5 {width: 41.66%;}
+    .col-s-6 {width: 50%;}
+    .col-s-7 {width: 58.33%;}
+    .col-s-8 {width: 66.66%;}
+    .col-s-9 {width: 75%;}
+    .col-s-10 {width: 83.33%;}
+    .col-s-11 {width: 91.66%;}
+    .col-s-12 {width: 100%;}
+}
+@media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+} 
